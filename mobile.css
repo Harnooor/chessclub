@@ -1,0 +1,174 @@
+body{
+    background-color: #322E2B;
+    text-align: center;
+}
+
+h1{    
+    font-family: 'Fjalla One', sans-serif;
+    font-size:50px;
+    color:white;
+    letter-spacing: 5px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+h5{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+
+#login{
+    text-align: center;
+    font-size: 15px;
+    width: 150px;
+    height: 10px;
+    color: white;
+    font-family: arial;
+    background-color: #E89031;
+    border: 0.5px solid rgb(256,256,256);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+#login:hover{
+    background-color: #3a3530;
+     -webkit-transition-duration: 0.8s;
+}
+
+header{
+    background-color: #3a3530;
+    padding: 3em;
+    left:0px;
+    top: 0px;
+}
+
+
+footer{
+    background-color: #3a3530;
+    color: #E89031;
+    position: fixed;
+    left:0px;
+    letter-spacing: 5px;
+    width:100%;
+    bottom:20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+hr{
+    border-color:#E89031;
+    background-color: #E89031;
+    height: 2px;
+    position:fixed;
+    bottom:9px;
+    width:96%;
+}
+
+
+#container {
+  width:250px;
+  height:350px;
+  background-color: white;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  position: relative; top:30px;
+  text-align: center;
+
+}
+
+#orangeline {
+    width 30%;
+    border-bottom: 2px solid orange;
+}
+
+#loginform{
+    text-align:center;
+    margin-top: 0px;
+
+}
+#signin h1{
+    color:#3a3530;
+}
+
+
+#loginform h1{
+    text-align: center;
+    font-weight: 100;
+}
+
+#loginform input{
+    width: 150px;
+    height: 30px;
+    color: white;
+    border-radius: 4px;
+    background-color: #cccccc;
+    border: 0.5px solid rgb(255,255,255);
+} 
+
+#loginform #loginbutton{
+    background-color: #E89031;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#loginform #loginbutton:hover{
+    background-color: #3a3530;
+    -webkit-transition-duration: 0.8s;
+}
+
+#loginform #firstname{
+    text-align: center;
+}
+#loginform #lastname{
+    text-align: center;
+}
+
+#loginform #firstname:hover{
+    background-color: #3a3530;
+    -webkit-transition-duration: 0.8s;
+}
+#loginform #lastname:hover{
+    background-color: #3a3530;
+    -webkit-transition-duration: 0.8s;
+}
+
+
+input::placeholder{
+    color:#515151;
+}
+
+#image{
+    float:right;
+    position: absolute;
+    top: 0px;
+    left:-13px;
+    width:23%;
+    height: auto;
+}
+
+#scroll{
+    margin-top:130px;
+}
+
+
+#confirm button{
+    padding:10px;
+    margin-top: 10%;
+    width:200px;
+    height: 50px;
+    margin-left:10px;
+    margin-right:10px;
+    color:white;
+    background-color: #E89031;
+    border: 0.5px solid rgb(255,255,255);
+        letter-spacing: 2px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}

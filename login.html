@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <title>Chess Club</title>
+        <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Days+One|Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <link rel="stylesheet" media="screen and (min-width: 0px)" href="mobile.css">
+        <link rel="stylesheet" media="screen and (min-width: 533px)" href="tablet.css">
+        <link rel="stylesheet" media="screen and (min-width: 700px)" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script>
+    
+            function checkForm(form)
+            {
+                if(form.firstname.value == "") {
+                    alert("Error: First name is empty!");
+                    form.firstname.focus();
+                    return false;
+                }
+                
+                if (form.lastname.value == "") {
+                    alert("Error: Last name is empty!");
+                    form.lastname.focus();
+                    return false;
+                }
+                return true;
+            }
+
+        </script> 
+
+    </head>
+    <body>
+        <h1>
+            Harnoor's Chess Club
+        </h1>
+        
+        <div id="image">
+            <img src="chessknight.png" height="100%" width="100%" >
+        </div>
+
+        <div id = "container">
+            <div id = "loginform">
+
+                <form action="home.html" method="post" onsubmit="return checkForm(this);">
+   
+                    <div id="signin">
+                        <h1>Sign In</h1> 
+                        <div id="orangeline"></div><br><br><br>
+                    </div>
+    
+                    <input type="text" id="firstname" name="firstname" placeholder="Enter First Name">
+                    <br><br>
+                    <input type="text" id="lastname" name="lastname" placeholder = "Enter Last Name"><br>
+                    <br><br>
+                    <a href = "home.html"><input type ="submit" id="loginbutton" value ="Submit"></a>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <h4>
+                Improve Your Chess Skills
+            </h4>
+        </footer>
+        <hr>
+<div id="scroll"></div>
+    </body>
+</html>

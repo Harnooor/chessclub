@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<center>
+    
+    
+    
+    <head>
+       
+        <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Days+One|Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <link rel="stylesheet" media="screen and (min-width: 0px)" href="homemobile.css">
+        <link rel="stylesheet" media="screen and (min-width: 533px)" href="hometablet.css">
+        <link rel="stylesheet" media="screen and (min-width: 700px)" href="home.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <header>
+          
+            <h1>
+                Harnoor's Chess Club
+            </h1>
+        
+            <a href = "home.html"><button>HOME</button></a>
+            <a href = "about.html"><button>ABOUT</button></a>
+            <a href = "where.html"><button>WHERE</button></a>
+            <a href = "video.html"><button>LEARN CHESS</button></a>
+            <a href = "confirm.html"><button>LOG OUT</button></a>
+      </header>
+              <h3>
+              Brampton, 500 Elbern Markell Drive, Room 122
+          </h3>
+<a href = "where.html"> <button> DRAWING </button> </a>
+    <a href = "where2.html"> <button> MAP </button></a>
+
+
+	<style>
+		#zombie_map {
+    height: 500px;
+    width: 75%;
+    text-align: center;
+	}
+
+	</style>
+
+
+	<title>Zombie</title>
+
+
+
+
+
+
+<body>
+
+<form>
+		<select id="icon_to_use">
+  			<option value="queen.png">Queen</option>
+  			<option value="king.png">King</option>
+			<option value="pawn.png">Pawn</option>
+			<option value="rook.png">Rook</option>
+		</select>
+	</form>
+
+	<div id="zombie_map"></div>
+
+
+	<script>
+
+    		var zombie_map;
+
+
+    		function initMap() {
+            		zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
+            		zoom: 15,
+            		center: {lat: 43.6678308, lng: -79.8318293}
+        		});
+			
+
+
+			if(navigator.geolocation) {
+    				navigator.geolocation.watchPosition(set_my_position);
+				}
+			else {
+    				alert("Geolocation doesn't work in your browser");
+				}
+
+			
+
+		for(var i=0; i < markers.length; i++){
+			var marker_data = markers[i].trim();			 
+			marker_data = marker_data.split(" ");
+			var latitude = marker_data[0];
+			var longitude = marker_data[1];
+			var emoji = marker_data[2] ; 
+			var marker_position = new google.maps.LatLng(marker_data[0],marker_data[1]);
+			var marker = new google.maps.Marker({		
+				position: marker_position,
+				map: zombie_map,
+				icon:emoji
+			});
+			all_markers.push(marker);
+    			}
+		}
+
+
+
+
+		function set_my_position (position){ 
+			var emoji = ("player.png");
+			var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			var marker = new google.maps.Marker({
+				position: pos,
+				map: zombie_map,
+				icon: emoji
+		});
+
+
+
+		}
+
+
+
+
+		function set_my_position (position){ 
+			var emoji = ("player.png");
+			var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			var marker = new google.maps.Marker({
+				position: pos,
+				map: zombie_map,
+				icon: emoji
+		});
+            zombie_map.addListener('click', function(e) {
+		var location = e.latLng;
+  		place_marker(location);
+	});
+
+
+    	}
+
+	function place_marker(location){
+		var emoji = document.getElementById('icon_to_use').value;
+		var marker = new google.maps.Marker({
+		position: location, 
+		map: zombie_map, 
+		icon: emoji
+	});
+		console.log(location.lat() + " " + location.lng() + " " + emoji);
+    }
+
+		
+        
+	</script>
+
+
+
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA0OvefScmLJoYEE0ZCksIcsQPTc0XgOI&callback=initMap">
+</script>
+    
+          <div id="scroll"></div>
+      <footer>
+          
+          <h4>
+              Improve Your Chess Skills
+          </h4>
+      
+      </footer>
+      <hr> 
+</body>
+
+</center>
+</html>
